@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="api@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="api">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="Android"/>
+    <schema id="4" parent="1" name="blog"/>
+    <schema id="5" parent="1" name="callbook"/>
+    <schema id="6" parent="1" name="contacts_book"/>
+    <schema id="7" parent="1" name="forum"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="kuzmenko"/>
+    <schema id="10" parent="1" name="local"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="shop"/>
+    <schema id="14" parent="1" name="slim_cms"/>
+    <schema id="15" parent="1" name="statistics"/>
+    <schema id="16" parent="1" name="sys"/>
+    <table id="17" parent="2" name="debug">
+      <Comment>table for debug app</Comment>
+    </table>
+    <column id="18" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="17" name="ip">
+      <Position>2</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="20" parent="17" name="date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="21" parent="17" name="note">
+      <Position>4</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <key id="22" parent="17" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
