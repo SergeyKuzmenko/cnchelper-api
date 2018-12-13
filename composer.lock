@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1eb18ed8fff61312bf24a0720559517",
+    "content-hash": "e4dbb2337b229eaa9e8a304332b83143",
     "packages": [
         {
             "name": "akrabat/ip-address-middleware",

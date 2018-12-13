@@ -30,6 +30,5 @@ $container['db'] = function ($c) {
 
 // Api Methods
 $container['api'] = function ($c) {
-    $api = new App\Api;
-    return $api;
+    return new CNCHelper\Api;
 };
