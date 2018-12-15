@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Api\\": "src/controllers/"
+            "CNCHelper\\": "src/controllers/"
         }
     },
     "require-dev": {
