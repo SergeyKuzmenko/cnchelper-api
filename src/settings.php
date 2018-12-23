@@ -15,11 +15,15 @@ return [
             'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/api.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+        // Database settings
         'db' => [
             'host' => 'localhost',
             'db' => 'api',
             'user' => 'user',
             'pass' => 'pass'
+        ],
+        "jwt" => [
+            'secret' => 'JhMdheUe3FB3sj3KFLFkYNysHaPQ06P8'
         ]
     ],
 ];

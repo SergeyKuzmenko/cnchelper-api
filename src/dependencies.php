@@ -33,13 +33,18 @@ $container['api'] = function ($container) {
     return new CNCHelper\Api($container);
 };
 
+$container['admin'] = function ($container) {
+    return new CNCHelper\Admin($container);
+};
+
 // custom page for error 404
 $container['notFoundHandler'] = function ($c) {
     return function ($request, $response) use ($c) {
         $c->logger->info("Error 404", ['url' => $request->getUri()->getPath(),"ip" => $request->getAttribute('ip_address')]);
 
         $res = [
-            'error' => 404,
+            'error' => true,
+            'code' => 404,
             'description' => 'Page not found'
 
         ];
@@ -53,7 +58,8 @@ $container['notAllowedHandler'] = function ($c) {
     return function ($request, $response, $methods) use ($c) {
         $c->logger->info("Error 405", ['url' => $request->getUri()->getPath(),"ip" => $request->getAttribute('ip_address')]);
         $res = [
-            'error' => 405,
+            'error' => true,
+            'code' => 405,
             'description' => 'Method not allowed. Method must be one of: '.implode(', ', $methods)
 
         ];
